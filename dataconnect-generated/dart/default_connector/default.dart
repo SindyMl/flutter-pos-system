@@ -1,30 +1,26 @@
 library default_connector;
-import 'package:firebase_data_connect/firebase_data_connect.dart';
 import 'dart:convert';
-
-
-
-
-
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DefaultConnector {
-  
+  DefaultConnector();
 
-  static ConnectorConfig connectorConfig = ConnectorConfig(
-    'us-central1',
-    'default',
-    'flutter-pos-system',
-  );
-
-  DefaultConnector({required this.dataConnect});
   static DefaultConnector get instance {
-    return DefaultConnector(
-        dataConnect: FirebaseDataConnect.instanceFor(
-            connectorConfig: connectorConfig,
-            sdkType: CallerSDKType.generated));
+    return DefaultConnector();
   }
 
-  FirebaseDataConnect dataConnect;
+  final FirebaseFirestore firestore = FirebaseFirestore.instance;
+
+  // Methods to query/write data
+  Future<void> addDocument(String collection, Map<String, dynamic> data) async {
+    await firestore.collection(collection).add(data);
+  }
+
+  Future<List<Map<String, dynamic>>> getDocuments(String collection) async {
+    final snapshot = await firestore.collection(collection).get();
+    return snapshot.docs.map((doc) => doc.data()).toList();
+  }
+
+  // Add more methods as needed
 }
 

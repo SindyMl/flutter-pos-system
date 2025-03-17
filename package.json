@@ -1,0 +1,29 @@
+{
+  "name": "flutter-pos-system",
+  "version": "1.0.0",
+  "description": "[![Apache 2.0](https://img.shields.io/github/license/nebula-plugins/gradle-netflixoss-project-plugin.svg)](http://www.apache.org/licenses/LICENSE-2.0)\r [![codecov](https://codecov.io/gh/evan361425/flutter-pos-system/branch/master/graph/badge.svg?token=KCMZRMU47V)](https://codecov.io/gh/evan361425/flutter-pos-system)\r [![Codacy Badge](https://app.codacy.com/project/badge/Grade/a3713a1200f340e78f7209f4a55be993)](https://www.codacy.com/gh/evan361425/flutter-pos-system/dashboard?utm_source=github.com&utm_medium=referral&utm_content=evan361425/flutter-pos-system&utm_campaign=Badge_Grade)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mock": "node mockScript.js",
+    "test": "jest",
+    "test-coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SindyMl/flutter-pos-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SindyMl/flutter-pos-system/issues"
+  },
+  "homepage": "https://github.com/SindyMl/flutter-pos-system#readme"
+}
