@@ -33,7 +33,7 @@ dependencies:
   http: ^1.2.2
   packages:
     git:
-      url: https://github.com/evan361425/flutter-pos-packages
+      url: https://github.com/evan361425/flutter-pos-packages-mock
       ref: master
   flutter_blue_plus:
     git:
