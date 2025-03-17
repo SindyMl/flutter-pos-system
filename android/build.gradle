@@ -10,25 +10,23 @@ buildscript {
         classpath 'com.google.gms:google-services:4.4.0'
     }
 }
+
 plugins {
-    // Add the dependency for the Google services Gradle plugin to the plugins block.
-  id 'com.google.gms.google-services' version '4.4.0' apply false
+    id 'com.google.gms.google-services' version '4.4.0' apply false
 }
 
 allprojects {
-  repositories {
-    google()
-    mavenCentral()
-  }
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
 
 rootProject.buildDir = '../build'
 
 subprojects {
-  project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
-  project.evaluationDependsOn(':app')
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app')  // Combined subproject blocks
 }
 
 tasks.register("clean", Delete) {
